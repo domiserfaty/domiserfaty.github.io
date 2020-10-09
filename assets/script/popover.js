@@ -1,26 +1,17 @@
-/*
-
-Contribution by Gabriel Colombo
-Profile: https://codepen.io/gabrielcolombo
-
-*/
-
-$(function () {
-    $('[data-toggle="popover"]').popover({
-           trigger:'hover'
-      })
-  });
+(function() {
+    var demo, fixedTable;
   
-  var oldScrollTop = $(window).scrollTop();
-  var oldScrollLeft = $(window).scrollLeft();
+    fixedTable = function(el) {
+      var $body, $header, $sidebar;
+      $body = $(el).find('.fixedTable-body');
+      $sidebar = $(el).find('.fixedTable-sidebar table');
+      $header = $(el).find('.fixedTable-header table');
+      return $($body).scroll(function() {
+        $($sidebar).css('margin-top', -$($body).scrollTop());
+        return $($header).css('margin-left', -$($body).scrollLeft());
+      });
+    };
   
-  $('.table-responsive').scroll(function () { 
-      if(oldScrollTop == $('.table-responsive').scrollTop()) {
-          $('.table-responsive').css('color', 'red');
-      }
-      else {
-          $('.table-responsive').css('color', 'blue');
-      }
-      oldScrollTop = $('.table-responsive').scrollTop();
-      oldScrollLeft = $('.table-responsive').scrollLeft();
-  });
+    demo = new fixedTable($('#demo'));
+  
+  }).call(this);
