@@ -1,5 +1,7 @@
 html{
     font-family: montserrat, "Helvetica Neue", sans-serif;
+    max-width:1280px;
+    max-height: 800px;
 }
 
 body {
@@ -7,8 +9,6 @@ body {
     display: block;
     padding-left: 400px;
     padding-top:150px;
-    max-width:1280px;
-    max-height: 800px;
 }
 
 html, body {
