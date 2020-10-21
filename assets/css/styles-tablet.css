@@ -29,9 +29,9 @@ h1{
 }
 
 .clock{
-  background:#F88207;
-  color: white;
-  padding:30px;
+  background:#F88207!important;
+  color: white!important;
+  padding:30px!important;
 }
 
   /*tablet*/
