@@ -164,3 +164,48 @@ table{
     padding-left: 35px;
     line-height: 2;
   }
+
+
+  /*tablet*/
+  .progress-circle {
+    font-size: 20px;
+    margin: 20px;
+    position: relative; /* so that children can be absolutely positioned */
+    padding: 0;
+    width: 5em;
+    height: 5em;
+    background-color: #F2E9E1; 
+    border-radius: 50%;
+    line-height: 5em;
+       float: left;
+ }
+
+ .progress-circle:after{
+  border: none;
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 4.3em;
+  height: 4.3em;
+  background-color: white;
+  content: " ";
+}
+
+.progress-circle span {
+  position: absolute;
+  line-height: 5em;
+  width: 5em;
+  text-align: center;
+  display: block;
+  color: #53777A;
+  z-index: 2;
+}
+
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto,auto,auto,auto);
+}
+
+.progress-circle.p83 .value-bar { transform: rotate(299deg); }
