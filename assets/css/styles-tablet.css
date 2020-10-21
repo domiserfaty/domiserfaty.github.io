@@ -64,8 +64,8 @@ h1{
 
 .progress-circle span {
   position: absolute;
-  line-height: 5em;
-  width: 5em;
+  line-height: 10em;
+  width: 10em;
   text-align: center;
   display: block;
   color: #53777A;
@@ -75,5 +75,3 @@ h1{
 .progress-circle.over50 .left-half-clipper {
   clip: rect(auto,auto,auto,auto);
 }
-
-.progress-circle.p83 .value-bar { transform: rotate(299deg); }
